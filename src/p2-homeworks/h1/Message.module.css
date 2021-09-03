@@ -1,0 +1,47 @@
+.wrapper {
+    display: flex;
+    margin: 10px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #c0d1c0;
+}
+
+.angle {
+    width: 20px;
+    height: 30px;
+    clip-path: polygon(100% 0, 0 50%, 30px 50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    align-self: flex-end;
+}
+
+.name {
+    color: #a99ad6;
+}
+
+.text {
+    word-wrap: break-word;
+}
+
+.time {
+    text-align: end;
+    color: gray;
+}
+
+.avatar {
+    align-self: flex-end;
+}
+
+.avatar img {
+    width: 75px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
