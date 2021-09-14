@@ -6,11 +6,11 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Text is required!'
 
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            alert('Введите текст...')
         } else {
             alert(text) // если нет ошибки показать текст
         }
@@ -21,8 +21,8 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
+            {/*<hr/>*/}
+            Homeworks 4
 
             <div className={s.column}>
                 <SuperInputText
@@ -30,6 +30,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
+                    className={s.superInput}
                     // spanClassName={s.testSpanError}
                 />
 
@@ -40,18 +41,18 @@ function HW4() {
                 {/*----------------------------------------------------*/}
 
                 <SuperButton>
-                    default
+                    Default
                 </SuperButton>
 
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    Delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 <SuperButton disabled>
-                    disabled
+                    Disabled
                 </SuperButton>
 
                 {/*----------------------------------------------------*/}
@@ -60,14 +61,14 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    Some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
-            <hr/>
+            {/*<hr/>*/}
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}

@@ -1,7 +1,17 @@
-.someClass {
-
+.addButton {
+    margin: 10px;
+    height: 30px;
 }
 
-.error {
-    border: 1px solid red;
+.errorText {
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    color: red;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
 }

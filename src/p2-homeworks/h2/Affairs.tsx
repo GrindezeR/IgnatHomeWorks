@@ -1,11 +1,12 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any +
     data: Array<AffairType>
     setFilter: (filter: FilterType) => void
-    deleteAffairCallback: (id:number) => void
+    deleteAffairCallback: (id: number) => void
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -31,17 +32,17 @@ function Affairs(props: AffairsPropsType) {
     }
 
     const btnStyle = {
-        margin:'10px 0',
+        margin: '10px 0',
         width: '64px',
     }
 
     return (
         <div>
             {mappedAffairs}
-                <button style={btnStyle} onClick={setAll}>All</button>
-                <button style={btnStyle} onClick={setHigh}>High</button>
-                <button style={btnStyle} onClick={setMiddle}>Middle</button>
-                <button style={btnStyle} onClick={setLow}>Low</button>
+            <SuperButton style={btnStyle} onClick={setAll}>All</SuperButton>
+            <SuperButton style={btnStyle} onClick={setHigh}>High</SuperButton>
+            <SuperButton style={btnStyle} onClick={setMiddle}>Middle</SuperButton>
+            <SuperButton style={btnStyle} onClick={setLow}>Low</SuperButton>
         </div>
     )
 }

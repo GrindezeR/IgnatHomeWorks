@@ -1,13 +1,12 @@
-import React, {useState} from 'react'
-import Affairs from './Affairs'
-import * as stream from "stream";
+import React, {useState} from 'react';
+import Affairs from './Affairs';
 
 // types
 export type AffairPriorityType = 'low' | 'middle' | 'high' // need to fix any +
 export type AffairType = { // need to fix any +
     _id: number
     name: string
-    priority: string
+    priority: AffairPriorityType
 }
 export type FilterType = 'all' | AffairPriorityType
 
@@ -24,14 +23,12 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any +
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any +
     if (filter === 'all') return affairs
     // need to fix +
-    else {
-        affairs = affairs.filter(a => a.priority === filter);
-        return affairs;
-    }
+    else return affairs.filter(a => a.priority === filter);
+
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any +
     // need to fix +
-    return affairs.filter(a => a._id != _id);
+    return affairs.filter(a => a._id !== _id);
 }
 
 function HW2() {
