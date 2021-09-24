@@ -1,3 +1,3 @@
-# Test project page
+# Project page
 
 https://grindezer.github.io/IgnatHomeWorks/
