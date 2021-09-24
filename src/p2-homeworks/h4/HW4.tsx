@@ -30,7 +30,6 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    className={s.superInput}
                     // spanClassName={s.testSpanError}
                 />
 
@@ -59,8 +58,7 @@ function HW4() {
 
                 <SuperCheckbox
                     checked={checked}
-                    onChangeChecked={setChecked}
-                >
+                    onChangeChecked={setChecked}>
                     Some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 

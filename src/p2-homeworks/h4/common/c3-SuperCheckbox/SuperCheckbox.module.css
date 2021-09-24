@@ -1,71 +1,24 @@
-.spanClassName {
-    font-family: Ubuntu, sans-serif;
-}
-
-
-/* Basic styles */
-.checkbox[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-
-label {
-    position: relative;
-    display: inline-block;
-    padding: 0 0 0 2em;
-    height: 1.5em;
-    line-height: 1.5;
+.label {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
-label:before, label:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 1.5em;
-    height: 1.5em;
+.spanClassName {
+    /*border: 1px solid red;*/
+    font-family: Ubuntu, sans-serif;
 }
 
-label:before {
-    content: " ";
-    border: 2px solid #bdc3c7;
-    border-radius: 50%;
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 2px solid #66bf3c;
 }
 
-/* Checkbox */
-.checkbox[type="checkbox"] + label:after {
-    content: "\2714";
-    color: #2c3e50;
-    line-height: 1.5;
-    text-align: center;
-    padding: 2px;
-}
-
-/* :checked */
-.checkbox[type="checkbox"]:checked + label:before {
-    background: #fff;
-    border-color: #66bf3c;
-}
-
-.checkbox[type="checkbox"] + label:after {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-}
-
-.checkbox[type="checkbox"]:checked + label:after {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-}
-
-/* Transition */
-label:before, label:after {
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
+.checkbox:checked {
+    appearance: none;
+    background-size: contain;
+    background-image: url('checkIcon.png');
 }
