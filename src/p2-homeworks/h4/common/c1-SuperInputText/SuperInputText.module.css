@@ -6,6 +6,11 @@
     font-size: 20px;
     color: black;
     outline: none;
+    background: transparent;
+}
+
+.input::placeholder {
+    /*color: gray;*/
 }
 
 .errorInput {

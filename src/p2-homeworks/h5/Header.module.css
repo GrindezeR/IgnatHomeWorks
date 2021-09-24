@@ -1,0 +1,42 @@
+.wrapper {
+    position: relative;
+    padding: 20px;
+    color: white;
+}
+
+.navWrapper {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    top: 3px;
+    left: -300px;
+    border: 2px solid black;
+    border-radius: 50px;
+    line-height: 30px;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0 0 0 15px;
+    color: white;
+    font-family: Bahnschrift, sans-serif;
+}
+
+.link:hover {
+    color: gold;
+}
+
+.active {
+    color: gold;
+}
+
+.navWrapper:hover {
+    left: -20px;
+    transition: .5s ease;
+}
+
+.icon {
+    margin-left: 5px;
+}
