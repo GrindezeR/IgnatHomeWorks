@@ -1,0 +1,16 @@
+.editSpan {
+    font-family: Bahnschrift, sans-serif;
+    display: flex;
+    margin: 5px 0;
+    gap: 5px;
+}
+
+.editSpan:after {
+    background-image: url("editIcon.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"";
+}
