@@ -10,7 +10,7 @@ function HW7() {
     return (
         <div>
             <hr/>
-            homeworks 7
+            Homeworks 7
 
             {/*should work (должно работать)*/}
             <div>
