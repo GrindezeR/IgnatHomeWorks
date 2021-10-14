@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
-import {homeWorkReducer} from './bll/homeWorkReducer'
+import {checkAC, homeWorkReducer, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './HW8.module.css';
 
-// export type UserType =
+export type UserType = {
+    _id: number
+    name: string
+    age: number
+}
 
 const initialPeople = [
     {_id: 0, name: 'Кот', age: 3},
@@ -14,30 +19,33 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<any>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<UserType[]>(initialPeople) // need to fix any
 
     // need to fix any
-    const finalPeople = people.map((p: any) => (
-        <div key={p._id}>
-            some name, age
+    const finalPeople = people.map((p: UserType) => (
+        <div className={s.wrapper} key={p._id}>
+            <div>{p.name}</div>
+            <div>{p.age}</div>
+            {/*some name, age*/}
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortAC('up')))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortAC('down')))
+    const sortAge = () => setPeople(homeWorkReducer(initialPeople, checkAC(18)));
 
     return (
         <div>
-            <hr/>
-            homeworks 8
+            {/*<hr/>*/}
+            Homeworks 8
 
             {/*should work (должно работать)*/}
             {finalPeople}
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
-
-            <hr/>
+            <SuperButton onClick={sortUp}>Sort up</SuperButton>
+            <SuperButton onClick={sortDown}>Sort down</SuperButton>
+            <SuperButton onClick={sortAge} red>Check 18</SuperButton>
+            {/*<hr/>*/}
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
             <hr/>
