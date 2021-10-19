@@ -11,7 +11,7 @@ export const homeWorkReducer = (state: UserType[], action: ActionsType): UserTyp
                     let nameTwo = b.name.toLocaleLowerCase();
                     if (nameOne < nameTwo) return -1;
                     else if (nameOne > nameTwo) return 1;
-                    return 0
+                    else return 0
                 })
             } else if (action.payload === 'down') {
                 let newArr = [...state]
@@ -20,14 +20,14 @@ export const homeWorkReducer = (state: UserType[], action: ActionsType): UserTyp
                     let nameTwo = b.name.toLocaleLowerCase();
                     if (nameOne > nameTwo) return -1;
                     else if (nameOne < nameTwo) return 1;
-                    return 0;
+                    else return 0;
                 });
                 return newArr;
             } else return [...state]
         }
         case 'CHECK': {
             // need to fix
-            return [...state].filter(t => t.age > action.payload);
+            return [...state].filter(t => t.age >= action.payload);
         }
         default:
             return state
