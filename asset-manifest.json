@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/IgnatHomeWorks/static/css/main.8024fc6d.chunk.css",
-    "main.js": "/IgnatHomeWorks/static/js/main.246512c2.chunk.js",
-    "main.js.map": "/IgnatHomeWorks/static/js/main.246512c2.chunk.js.map",
+    "main.css": "/IgnatHomeWorks/static/css/main.49c93ad9.chunk.css",
+    "main.js": "/IgnatHomeWorks/static/js/main.9052f466.chunk.js",
+    "main.js.map": "/IgnatHomeWorks/static/js/main.9052f466.chunk.js.map",
     "runtime-main.js": "/IgnatHomeWorks/static/js/runtime-main.f8bcf4b7.js",
     "runtime-main.js.map": "/IgnatHomeWorks/static/js/runtime-main.f8bcf4b7.js.map",
-    "static/js/2.c56b22cd.chunk.js": "/IgnatHomeWorks/static/js/2.c56b22cd.chunk.js",
-    "static/js/2.c56b22cd.chunk.js.map": "/IgnatHomeWorks/static/js/2.c56b22cd.chunk.js.map",
+    "static/js/2.1beb8ef7.chunk.js": "/IgnatHomeWorks/static/js/2.1beb8ef7.chunk.js",
+    "static/js/2.1beb8ef7.chunk.js.map": "/IgnatHomeWorks/static/js/2.1beb8ef7.chunk.js.map",
     "index.html": "/IgnatHomeWorks/index.html",
-    "static/css/main.8024fc6d.chunk.css.map": "/IgnatHomeWorks/static/css/main.8024fc6d.chunk.css.map",
-    "static/js/2.c56b22cd.chunk.js.LICENSE.txt": "/IgnatHomeWorks/static/js/2.c56b22cd.chunk.js.LICENSE.txt",
+    "static/css/main.49c93ad9.chunk.css.map": "/IgnatHomeWorks/static/css/main.49c93ad9.chunk.css.map",
+    "static/js/2.1beb8ef7.chunk.js.LICENSE.txt": "/IgnatHomeWorks/static/js/2.1beb8ef7.chunk.js.LICENSE.txt",
     "static/media/404.9494ad47.png": "/IgnatHomeWorks/static/media/404.9494ad47.png",
     "static/media/arrow.240338df.png": "/IgnatHomeWorks/static/media/arrow.240338df.png",
     "static/media/index.css": "/IgnatHomeWorks/static/media/back.9cf79e92.webp",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8bcf4b7.js",
-    "static/js/2.c56b22cd.chunk.js",
-    "static/css/main.8024fc6d.chunk.css",
-    "static/js/main.246512c2.chunk.js"
+    "static/js/2.1beb8ef7.chunk.js",
+    "static/css/main.49c93ad9.chunk.css",
+    "static/js/main.9052f466.chunk.js"
   ]
 }
