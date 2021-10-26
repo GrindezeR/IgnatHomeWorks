@@ -34,11 +34,11 @@ function Clock() {
     const seconds = Number(date?.getSeconds()) > 10 ? date?.getSeconds() : '0' + date?.getSeconds();
 
     const day = Number(date?.getDate()) > 10 ? date?.getDate() : '0' + date?.getDate();
-    const mounth = Number(date?.getMonth()) > 10 ? date?.getMonth() : '0' + date?.getMonth();
+    const month = Number(date?.getMonth()) > 10 ? date?.getMonth() : '0' + date?.getMonth();
     const year = date?.getFullYear();
 
     const stringTime = date && `${hours}:${minutes}:${seconds}` || <br/> // fix with date
-    const stringDate = `${day}.${mounth}.${year}` || <br/>  // fix with date
+    const stringDate = `${day}.${month}.${year}` || <br/>  // fix with date
 
     return (
         <div>
