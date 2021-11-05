@@ -4,34 +4,44 @@ import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
     const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [value2, setValue2] = useState<number[]>([value1, 50])
 
+    // console.log('VAL1', value1);
+    // console.log('VAL2', value2);
     return (
         <div>
-            <hr/>
-            homeworks 11
+            {/*<hr/>*/}
+            Homeworks 11
 
             {/*should work (должно работать)*/}
             <div>
                 <span>{value1}</span>
-                <SuperRange
+                <SuperRange value={value1}
+                            onChangeRange={setValue1}
+
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
+            <div style={{position: "relative"}}>
                 <span>{value1}</span>
+                {/*сделать так чтоб value1 и value2 изменялось*/}
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    setValue1={setValue1}
+                    value={[value1, value2[1]]}
+                    onChangeRange={setValue2}
+                    min={0}
+                    max={100}
+                    step={10}
                 />
-                <span>{value2}</span>
+                <span>{value2[1]}</span>
             </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}
             {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
+            {/*<hr/>*/}
         </div>
     )
 }

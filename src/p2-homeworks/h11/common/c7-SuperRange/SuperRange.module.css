@@ -1,3 +1,17 @@
 .range {
+    background-color: #13bba4;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    width: 155px;
+    appearance: none;
+}
 
+.range::-webkit-slider-thumb {
+    appearance: none;
+    background: #e83a15;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 }

@@ -3,9 +3,9 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './Clock.module.css';
 
 function Clock() {
-    const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
-    const [show, setShow] = useState<boolean>(false)
+    const [timerId, setTimerId] = useState<number>(0);
+    const [date, setDate] = useState<Date>();
+    const [show, setShow] = useState<boolean>(false);
 
     const stop = () => {
         // stop
@@ -22,20 +22,26 @@ function Clock() {
 
     const onMouseEnter = () => {
         // show
-        setShow(true);
+        if (date !== undefined) {
+            setShow(true);
+        }
     }
     const onMouseLeave = () => {
         // close
         setShow(false);
     }
 
-    const hours = Number(date?.getHours()) > 10 ? date?.getHours() : '0' + date?.getHours();
-    const minutes = Number(date?.getMinutes()) > 10 ? date?.getMinutes() : '0' + date?.getMinutes();
-    const seconds = Number(date?.getSeconds()) > 10 ? date?.getSeconds() : '0' + date?.getSeconds();
+    const getTime = (time?: number) => {
+        return Number(time) < 10 ? `0${time}` : time;
+    }
 
-    const day = Number(date?.getDate()) > 10 ? date?.getDate() : '0' + date?.getDate();
-    const month = Number(date?.getMonth()) > 10 ? date?.getMonth() : '0' + date?.getMonth();
-    const year = date?.getFullYear();
+    const hours = getTime(date?.getHours());
+    const minutes = getTime(date?.getMinutes());
+    const seconds = getTime(date?.getSeconds());
+
+    const day = getTime(date?.getDate());
+    const month = getTime(date?.getMonth());
+    const year = getTime(date?.getFullYear());
 
     const stringTime = date && `${hours}:${minutes}:${seconds}` || <br/> // fix with date
     const stringDate = `${day}.${month}.${year}` || <br/>  // fix with date
@@ -57,4 +63,4 @@ function Clock() {
     )
 }
 
-export default Clock
+export default Clock;
