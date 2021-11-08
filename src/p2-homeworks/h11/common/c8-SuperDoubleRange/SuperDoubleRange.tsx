@@ -1,62 +1,77 @@
-import React, {useState} from 'react';
-import Slider from "@mui/material/Slider";
-import {isBoolean} from "util";
+import React, {ChangeEvent, useEffect} from 'react';
+import s from './SuperDoubleRange.module.css';
 
-
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: number[]) => void
-    // onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    setValue1: (value: number) => void
-    min?: number,
-    max?: number,
-    step?: number,
+type TwoInputsPropsType = {
+    onChangeRange: (value: [number, number]) => void
+    value: [number, number]
+    min?: number
+    max?: number
+    step?: number
+    disable?: boolean
     // min, max, step, disable, ...
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
+const SuperDoubleRange: React.FC<TwoInputsPropsType> = (
     {
-        onChangeRange, value, setValue1,
-        min, max, step
+        onChangeRange, value,
+        max, min, step, disable
         // min, max, step, disable, ...
     }) => {
     // сделать самому, можно подключать библиотеки
+    useEffect(() => {
+        onChangeRange([value[0], max ? max : value[1]])
+        onChangeRange([min ? min : value[0], value[1]])
+    }, [])
+    useEffect(() => {
+        if (value[0] < value[1]) {
+            onChangeRange([value[0], value[1]]);
+        } else if (value[0] > value[1]) {
+            onChangeRange([value[0], value[1] + 1]);
+        }
+    }, [value])
 
-    const Style = {
-        width: '150px',
-        height: '5px',
-        margin: '0 10px',
-        borderRadius: '5px',
-        cursor: 'pointer',
+    const onChangeOne = (e: ChangeEvent<HTMLInputElement>) => {
+        const inputValue1 = +e.currentTarget.value;
+
+        if (inputValue1 < value[1]) {
+            onChangeRange([inputValue1, value[1]]);
+        } else if (inputValue1 > value[1]) {
+            onChangeRange([inputValue1, value[1] + ((step ? step : 1))]);
+        }
     }
-    const [disable, setDisable] = useState(false)
 
-    const handleChange = (event: Event, newValue: number[] | number) => {
-        if (Array.isArray(newValue)) {
-            setValue1(newValue[0]);
-            console.log(newValue[0])
-            if(newValue[0] > newValue[1]) {
-                setDisable(true)
-            }
+    const onChangeTwo = (e: ChangeEvent<HTMLInputElement>) => {
+        const inputValue2 = +e.currentTarget.value;
+
+        if (inputValue2 > value[0]) {
+            onChangeRange([value[0], inputValue2]);
+        } else if (inputValue2 < value[0]) {
+            onChangeRange([value[0] - (step ? step : 1), inputValue2]);
         }
-        if (onChangeRange) {
-            onChangeRange(newValue as number[]);
-        }
-    };
+    }
 
     return (
-        <>
-            <Slider style={Style}
-                    value={value ? value : 0}
-                    onChange={handleChange}
-                    size={"small"}
-                    disableSwap
-                    min={min}
-                    max={max}
-                    step={step}
-                    disabled={disable}
+        <div>
+            <input className={s.first}
+                   type="range"
+                   value={value[0]}
+                   onChange={onChangeOne}
+                   min={min}
+                   max={max}
+                   step={step}
+                   disabled={disable}
             />
-        </>
+
+            <input className={s.second}
+                   type="range"
+                   value={value[1]}
+                   onChange={onChangeTwo}
+                   min={min}
+                   max={max}
+                   step={step}
+                   disabled={disable}
+            />
+        </div>
     )
 }
 

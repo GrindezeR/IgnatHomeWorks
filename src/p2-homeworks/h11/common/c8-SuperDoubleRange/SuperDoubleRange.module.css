@@ -1,0 +1,38 @@
+.first {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: darkmagenta;
+    height: 4px;
+    border-radius: 10px;
+    pointer-events: none;
+    width: 200px;
+    /*border: 1px solid green;*/
+}
+
+.first::-webkit-slider-thumb, .second::-webkit-slider-thumb {
+    pointer-events: auto;
+    appearance: none;
+    width: 5px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+
+.second::-webkit-slider-thumb {
+    background-color: white;
+}
+
+.second {
+    width: 200px;
+    box-sizing: border-box;
+    appearance: none;
+    background: rgba(255,255,255, 0);
+    height: 4px;
+    border-radius: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 40px;
+    top: 8px;
+    /*border: 1px solid red;*/
+}
