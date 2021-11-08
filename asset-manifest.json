@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/IgnatHomeWorks/static/css/main.15d76401.chunk.css",
-    "main.js": "/IgnatHomeWorks/static/js/main.209520be.chunk.js",
-    "main.js.map": "/IgnatHomeWorks/static/js/main.209520be.chunk.js.map",
+    "main.css": "/IgnatHomeWorks/static/css/main.ac608a20.chunk.css",
+    "main.js": "/IgnatHomeWorks/static/js/main.8ee27837.chunk.js",
+    "main.js.map": "/IgnatHomeWorks/static/js/main.8ee27837.chunk.js.map",
     "runtime-main.js": "/IgnatHomeWorks/static/js/runtime-main.f8bcf4b7.js",
     "runtime-main.js.map": "/IgnatHomeWorks/static/js/runtime-main.f8bcf4b7.js.map",
-    "static/js/2.224a8a8d.chunk.js": "/IgnatHomeWorks/static/js/2.224a8a8d.chunk.js",
-    "static/js/2.224a8a8d.chunk.js.map": "/IgnatHomeWorks/static/js/2.224a8a8d.chunk.js.map",
+    "static/js/2.8e92f3a6.chunk.js": "/IgnatHomeWorks/static/js/2.8e92f3a6.chunk.js",
+    "static/js/2.8e92f3a6.chunk.js.map": "/IgnatHomeWorks/static/js/2.8e92f3a6.chunk.js.map",
     "index.html": "/IgnatHomeWorks/index.html",
-    "static/css/main.15d76401.chunk.css.map": "/IgnatHomeWorks/static/css/main.15d76401.chunk.css.map",
-    "static/js/2.224a8a8d.chunk.js.LICENSE.txt": "/IgnatHomeWorks/static/js/2.224a8a8d.chunk.js.LICENSE.txt",
+    "static/css/main.ac608a20.chunk.css.map": "/IgnatHomeWorks/static/css/main.ac608a20.chunk.css.map",
+    "static/js/2.8e92f3a6.chunk.js.LICENSE.txt": "/IgnatHomeWorks/static/js/2.8e92f3a6.chunk.js.LICENSE.txt",
     "static/media/404.9494ad47.png": "/IgnatHomeWorks/static/media/404.9494ad47.png",
     "static/media/arrow.240338df.png": "/IgnatHomeWorks/static/media/arrow.240338df.png",
     "static/media/index.css": "/IgnatHomeWorks/static/media/back.9cf79e92.webp",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8bcf4b7.js",
-    "static/js/2.224a8a8d.chunk.js",
-    "static/css/main.15d76401.chunk.css",
-    "static/js/main.209520be.chunk.js"
+    "static/js/2.8e92f3a6.chunk.js",
+    "static/css/main.ac608a20.chunk.css",
+    "static/js/main.8ee27837.chunk.js"
   ]
 }
