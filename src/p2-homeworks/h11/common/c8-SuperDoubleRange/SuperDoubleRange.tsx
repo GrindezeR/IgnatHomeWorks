@@ -18,17 +18,18 @@ const SuperDoubleRange: React.FC<TwoInputsPropsType> = (
         // min, max, step, disable, ...
     }) => {
     // сделать самому, можно подключать библиотеки
+
     useEffect(() => {
         onChangeRange([value[0], max ? max : value[1]])
         onChangeRange([min ? min : value[0], value[1]])
-    }, [])
+    }, [max, min, onChangeRange, value])
     useEffect(() => {
         if (value[0] < value[1]) {
             onChangeRange([value[0], value[1]]);
         } else if (value[0] > value[1]) {
             onChangeRange([value[0], value[1] + 1]);
         }
-    }, [value])
+    }, [value, onChangeRange])
 
     const onChangeOne = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue1 = +e.currentTarget.value;

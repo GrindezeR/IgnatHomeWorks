@@ -1,0 +1,11 @@
+.statusGood {
+    color: green;
+}
+
+.statusBad {
+    color: crimson;
+}
+
+.info {
+    color: dimgray;
+}

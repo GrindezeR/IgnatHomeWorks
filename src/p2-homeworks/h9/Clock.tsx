@@ -43,8 +43,8 @@ function Clock() {
     const month = getTime(date?.getMonth());
     const year = getTime(date?.getFullYear());
 
-    const stringTime = date && `${hours}:${minutes}:${seconds}` || <br/> // fix with date
-    const stringDate = `${day}.${month}.${year}` || <br/>  // fix with date
+    const stringTime = (date && `${hours}:${minutes}:${seconds}`) || <br/> // fix with date
+    const stringDate = `${day}.${month}.${year}`  // fix with date
 
     return (
         <div>
