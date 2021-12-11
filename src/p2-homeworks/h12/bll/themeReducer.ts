@@ -22,6 +22,6 @@ type changeThemeCType = {
 export const changeThemeC = (theme: string): changeThemeCType => {
     return {
         type: 'CHANGE-THEME', theme
-    }
+    } as const
 };
 // fix any
